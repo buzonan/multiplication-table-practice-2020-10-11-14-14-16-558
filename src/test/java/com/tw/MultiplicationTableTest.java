@@ -14,7 +14,7 @@ public class MultiplicationTableTest {
         int end = 1;
 
         //when
-        String actual = multiplicationTable.create(start, end);
+        String actual = multiplicationTable.generateMultiplicationTable(start, end);
 
         //then
         assertNull(actual);
@@ -28,7 +28,7 @@ public class MultiplicationTableTest {
         int end = 1001;
 
         //when
-        String actual = multiplicationTable.create(start, end);
+        String actual = multiplicationTable.generateMultiplicationTable(start, end);
 
         //then
         assertNull(actual);
@@ -42,7 +42,7 @@ public class MultiplicationTableTest {
         int end = 2;
 
         //when
-        String actual = multiplicationTable.create(start, end);
+        String actual = multiplicationTable.generateMultiplicationTable(start, end);
 
         //then
         assertEquals("2*2=4", actual);
@@ -56,7 +56,7 @@ public class MultiplicationTableTest {
         int end = 5;
 
         //when
-        String actual = multiplicationTable.create(start, end);
+        String actual = multiplicationTable.generateMultiplicationTable(start, end);
         String expected = String.format("2*2=4%n2*3=6  3*3=9%n2*4=8  3*4=12  4*4=16%n2*5=10  3*5=15  4*5=20  5*5=25");
 
         //then
